@@ -1,197 +1,182 @@
-# DSBDAL Lab – Complete Problem Mapping
+# DSBDAL Lab – Problem Statements and Solutions
 
-This repository contains my solutions for all DSBDAL lab problems for TE COMP (2019 pattern).  
-Each section below restates the **problem statement in plain words** and points to the **file(s) containing the solution**.
-
----
-
-## Problem 1 – Data Wrangling I (open dataset)
-
-Use Python and pandas on any open‑source dataset to:
-
-- Import required libraries and load the dataset from the web (with dataset description and source URL).
-- Inspect the dataframe: shape, basic statistics, and missing values.
-- Describe each variable (meaning, type) and summarize variable types (numeric, categorical, etc.).
-- Fix incorrect data types, normalize / scale numeric features, and convert categorical variables to numeric codes.[file:1]
-
-**Solution file**
-
-- `Assignment1.ipynb`
+This repository contains my solutions for all DSBDAL lab problems (TE COMP, 2019 pattern).  
+Each section below lists the official **problem title** and a brief description taken from the lab manual, followed by the **file containing the solution**.[DSBDAL-problem-statements.docx.pdf][file:33]
 
 ---
 
-## Problem 2 – Data Wrangling II (academic performance)
+## 1. Data Wrangling I
 
-Create an “academic performance” dataset for students and:
+**Official title:** Data Wrangling I – Perform the following operations using Python on any open source dataset (e.g., data.csv).[file:33]
 
-- Detect and handle missing values and inconsistencies.
-- Scan numeric variables for outliers and treat them with a suitable technique (e.g. IQR‑based removal).[file:1]
-- Apply at least one data transformation (e.g. scaling, log transform) with a clear reason: improving scale, linearising relations, or reducing skewness toward a normal distribution.
+**What it asks (short):**
 
-**Solution file**
+- Import libraries and load an open‑source dataset from the web, with description and URL.  
+- Do basic EDA: shape, `describe()`, missing values, variable descriptions and types.  
+- Normalize / format data, fix data types, and convert categorical variables to quantitative form, explaining each step.[file:33]
 
-- `dsbda 2.pdf`  – screenshots of the Colab notebook that creates and cleans the dataset.
-
----
-
-## Problem 3 – Descriptive statistics and Iris summary
-
-On a numeric dataset:
-
-- Compute grouped descriptive statistics (mean, median, min, max, standard deviation, percentiles, etc.) for one or more numeric variables, grouped by a categorical variable (e.g. income grouped by age group).[file:1]
-- Build a representation that associates a numeric list with each category.
-- For the Iris dataset, compute and display basic statistics (percentiles, mean, standard deviation, etc.) separately for each species.
-
-**Solution file**
-
-- `Assignment3.ipynb`
+**Solution file:** `Assignment1.ipynb`
 
 ---
 
-## Problem 4 – Data Analytics I (Linear Regression – Boston Housing)
+## 2. Data Wrangling II
 
-Build a regression model to predict house prices using the Boston Housing dataset:
+**Official title:** Data Wrangling II – Create an “Academic performance” dataset of students and perform the following operations using Python.[file:33]
 
-- Load the dataset (14 features, 506 rows) and explain the key features.
-- Split into training and test sets.
-- Train a linear regression model to predict house price from the given features.
-- Evaluate the model (e.g. mean squared error, \(R^2\)) and comment briefly on the performance.[file:1]
+**What it asks (short):**
 
-**Solution file**
+- Scan all variables for missing values / inconsistencies and treat them appropriately.  
+- Detect numeric outliers and handle them with a suitable method.  
+- Apply at least one transformation to change scale / linearize / reduce skewness, and document the reasoning.[file:33]
 
-- `Assignment4.ipynb`
-- Dataset: `Boston.csv`
+**Solution file:** `dsbda 2.pdf`
 
 ---
 
-## Problem 5 – Data Analytics II (Logistic Regression – Social_Network_Ads)
+## 3. Descriptive Statistics – Measures of Central Tendency and Variability
 
-On the `Social_Network_Ads.csv` dataset:
+**Official title:** Descriptive Statistics – Measures of Central Tendency and variability.[file:33]
 
-- Implement logistic regression (Python) to perform binary classification.[file:1]
-- Compute the confusion matrix and derive TN, FP, FN, TP.
-- Calculate accuracy, error rate, precision, and recall.
+**What it asks (short):**
 
-**Solution file**
+- For a numeric dataset (e.g., age, income), compute mean, median, min, max, standard deviation etc., **grouped by a categorical variable**, and represent values per category.[file:33]  
+- For `iris.csv`, display basic statistics (percentiles, mean, standard deviation, etc.) for each species (`Iris-setosa`, `Iris-versicolor`, `Iris-virginica`).[file:33]
 
-- `Assignment5.ipynb`
-- Dataset: `Social_Network_Ads.csv`
+**Solution file:** `Assignment3.ipynb`
 
 ---
 
-## Problem 6 – Data Analytics III (Naive Bayes – Iris)
+## 4. Data Analytics I
 
-On the Iris dataset:
+**Official title:** Data Analytics I – Create a Linear Regression Model using Python/R to predict home prices using Boston Housing Dataset.[file:33]
 
-- Implement a simple Naive Bayes classifier in Python.
-- Evaluate on a test set.
-- Compute confusion matrix and derive TN, FP, FN, TP along with accuracy, error rate, precision, and recall.[file:1]
+**What it asks (short):**
 
-**Solution file**
+- Use the Boston Housing dataset (506 samples, 14 features).  
+- Build a linear regression model to predict house prices from the features, and evaluate the model (e.g., error and \(R^2\)).[file:33]
 
-- `Assignment6.ipynb`
-- Dataset: `iris.csv`
+**Solution file:** `Assignment4.ipynb` (dataset: `Boston.csv`)
 
 ---
 
-## Problem 7 – Text Analytics (pre‑processing + TF‑IDF)
+## 5. Data Analytics II
 
-For a sample text document:
+**Official title:** Data Analytics II – Implement logistic regression using Python/R to perform classification on Social_Network_Ads.csv dataset.[file:33]
 
-- Apply document preprocessing steps: tokenization, part‑of‑speech (POS) tagging, stop‑word removal, stemming, and lemmatization.
-- Build a numerical representation of the document using term frequency (TF) and inverse document frequency (IDF / TF‑IDF).[file:1]
+**What it asks (short):**
 
-**Solution file**
+- Train a logistic regression classifier on `Social_Network_Ads.csv`.  
+- Compute the confusion matrix and derive TP, FP, TN, FN, Accuracy, Error rate, Precision, Recall.[file:33]
 
-- `Assignment7.ipynb`
-
----
-
-## Problem 8 – Data Visualization I (Titanic patterns and fare histogram)
-
-Using the inbuilt Titanic dataset (around 891 passengers):
-
-- Use Seaborn to explore patterns in the data (e.g. survival vs class, sex, age).
-- Plot a histogram showing how passenger ticket fare is distributed.[file:1]
-
-**Solution file**
-
-- `Assignment9dsbda.ipynb`
-- Dataset: `Titanic-Dataset.csv` (and/or Seaborn `titanic`)
+**Solution file:** `Assignment5.ipynb` (dataset: `Social_Network_Ads.csv`)
 
 ---
 
-## Problem 9 – Data Visualization II (Titanic age vs sex vs survival)
+## 6. Data Analytics III
 
-On the same Titanic dataset:
+**Official title:** Data Analytics III – Implement Simple Naïve Bayes classification algorithm using Python/R on iris.csv dataset.[file:33]
 
-- Plot a boxplot of passenger age for each gender, with survival status as an additional factor (age vs `sex` with a `survived` hue).[file:1]
-- Write textual observations explaining what the boxplot suggests about survival in relation to age and gender.
+**What it asks (short):**
 
-**Solution file**
+- Train a Naive Bayes classifier on `iris.csv`.  
+- Compute a confusion matrix and the same metrics as above: TP, FP, TN, FN, Accuracy, Error rate, Precision, Recall.[file:33]
 
-- `Assignment9dsbda.ipynb`
-- Dataset: `Titanic-Dataset.csv`
-
----
-
-## Problem 10 – Data Visualization III (Iris histograms and boxplots)
-
-Using the Iris dataset:
-
-- List all features (sepal length/width, petal length/width, species) and classify each as numeric or nominal (categorical).
-- Plot a histogram for each numeric feature to show its distribution.
-- Plot a boxplot for each numeric feature, compare the distributions, and identify outliers.[file:1]
-
-**Solution file**
-
-- `Assignment10.ipynb`
-- Dataset: `iris.csv`
+**Solution file:** `Assignment6.ipynb` (dataset: `iris.csv`)
 
 ---
 
-## Problem 11 – Hadoop MapReduce log analysis (HDFS)
+## 7. Text Analytics
 
-Design a MapReduce application that processes a system log file and:
+**Official title:** Text Analytics.[file:33]
 
-- Reads records describing user logins with time spent.
-- Computes the total login time for each user.
-- From the output, identify which user(s) logged in for the maximum total duration.[file:29]
+**What it asks (short):**
 
-**Solution file**
+1. Take a sample document and perform preprocessing: Tokenization, POS Tagging, stop‑words removal, Stemming, and Lemmatization.  
+2. Build a document representation by computing Term Frequency and Inverse Document Frequency (TF, IDF / TF‑IDF).[file:33]
 
-- `Assignment-11.pdf` – contains `LogMapper`, `LogReducer`, `LogDriver` code and execution screenshots.
-
----
-
-## Problem 12 – Hadoop MapReduce weather analysis + Scala Spark program
-
-### 12(a) Weather data – hottest year using MapReduce
-
-Design a MapReduce application that:
-
-- Reads weather data records containing year and temperature.
-- For each year, computes the maximum temperature observed.
-- From the results, identify the hottest year(s).[file:31]
-
-**Solution file**
-
-- `Assignment-12.pdf` – contains `WeatherMapper`, `WeatherReducer`, `WeatherDriver` code and execution screenshots.
-
-### 12(b) Simple Scala program using Apache Spark
-
-Write a simple Scala program using Apache Spark (local mode):
-
-- Read a text file from HDFS or local file system.
-- Perform the classic WordCount task: split lines into words, count occurrences of each word, and save the result back as text.[file:1]
-
-**Solution file**
-
-- `dsbda 12.pdf` – Scala + Spark WordCount implementation.
+**Solution file:** `Assignment7.ipynb`
 
 ---
 
-## Notes
+## 8. Data Visualization I
 
-- All problem statements above are paraphrased from the official DSBDAL lab manual and department handouts; see the attached PDFs for the exact wording.[file:1][file:29][file:31]
-- This README is meant to make it obvious for evaluators: **for any problem number, they can immediately see which file contains the solution.**
+**Official title:** Data Visualization I.[file:33]
+
+**What it asks (short):**
+
+1. Use the inbuilt `titanic` dataset (891 passengers) and Seaborn to explore patterns in the data.  
+2. Plot a histogram showing how the ticket price (`fare`) is distributed for passengers.[file:33]
+
+**Solution file:** `Assignment9dsbda.ipynb` (dataset: `Titanic-Dataset.csv` or Seaborn `titanic`)
+
+---
+
+## 9. Data Visualization II
+
+**Official title:** Data Visualization II.[file:33]
+
+**What it asks (short):**
+
+- Using the same `titanic` dataset, plot a **boxplot of age distribution** for each gender with survival information (columns `sex`, `age`, `survived`).  
+- Write observations explaining what the plot shows.[file:33]
+
+**Solution file:** `Assignment9dsbda.ipynb`
+
+---
+
+## 10. Data Visualization III
+
+**Official title:** Data Visualization III.[file:33]
+
+**What it asks (short):**
+
+- Download the Iris dataset into a DataFrame.  
+1. List all features and specify their types (numeric vs nominal).  
+2. Draw a histogram for each feature to show distributions.  
+3. Draw a boxplot for each feature, compare distributions, and identify outliers.[file:33]
+
+**Solution file:** `Assignment10.ipynb` (dataset: `iris.csv`)
+
+---
+
+## 11. Hadoop MapReduce – WordCount in Java
+
+**Official title:** Write a code in JAVA for a simple WordCount application that counts the number of occurrences of each word in a given input set using the Hadoop MapReduce framework on local‑standalone set‑up.[file:33]
+
+**What it asks (short):**
+
+- Implement the classic WordCount MapReduce job in Java.  
+- Run it on a local / standalone Hadoop setup and count occurrences of each word in an input text.[file:33]
+
+**Solution file (department variant):**
+
+- `Assignment-11.pdf` – Java MapReduce code and run screenshots for log‑file analysis (same MapReduce pattern; can be used to demonstrate WordCount‑style aggregation).
+
+*(If you also add a pure WordCount Java code file, mention it here.)*
+
+---
+
+## 12. Simple Program in Scala using Apache Spark
+
+**Official title:** Write a simple program in SCALA using Apache Spark framework.[file:33]
+
+**What it asks (short):**
+
+- Implement a basic Scala application using the Spark framework (e.g., reading a text file, transforming data, and writing results).[file:33]
+
+**Solution files:**
+
+- `dsbda 12.pdf` – Scala + Spark WordCount implementation (reads text, counts words, writes output).  
+- `Assignment-12.pdf` – Java MapReduce program for weather data (department‑specific extension; finds maximum temperature per year).
+
+---
+
+## How to Use This Repo
+
+For each problem:
+
+1. Read the **official statement** in `DSBDAL-problem-statements.docx.pdf`.  
+2. Open the **corresponding file** listed above (`AssignmentX.ipynb`, `Assignment-11.pdf`, `Assignment-12.pdf`, `dsbda 2.pdf`, `dsbda 12.pdf`).  
+3. Run the notebook or review the code/output as needed.
+
+This README is intentionally one‑to‑one with the official DSBDAL problem sheet so evaluators can quickly verify which file solves which problem.[file:33]
